@@ -11,7 +11,7 @@ import SwiftUI
 struct submission_foundationApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ExploreMenu()
         }
     }
 }
