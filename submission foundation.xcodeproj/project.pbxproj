@@ -11,6 +11,7 @@
 		0CD33C6F29DE6A8B00ADF95A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD33C6E29DE6A8B00ADF95A /* ContentView.swift */; };
 		0CD33C7129DE6A8C00ADF95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CD33C7029DE6A8C00ADF95A /* Assets.xcassets */; };
 		0CD33C7429DE6A8C00ADF95A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CD33C7329DE6A8C00ADF95A /* Preview Assets.xcassets */; };
+		152E058029E39A320050D704 /* DetailedInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152E057F29E39A320050D704 /* DetailedInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0CD33C6E29DE6A8B00ADF95A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0CD33C7029DE6A8C00ADF95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CD33C7329DE6A8C00ADF95A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		152E057F29E39A320050D704 /* DetailedInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedInformation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				0CD33C6E29DE6A8B00ADF95A /* ContentView.swift */,
 				0CD33C7029DE6A8C00ADF95A /* Assets.xcassets */,
 				0CD33C7229DE6A8C00ADF95A /* Preview Content */,
+				152E057F29E39A320050D704 /* DetailedInformation.swift */,
 			);
 			path = "submission foundation";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CD33C6F29DE6A8B00ADF95A /* ContentView.swift in Sources */,
+				152E058029E39A320050D704 /* DetailedInformation.swift in Sources */,
 				0CD33C6D29DE6A8B00ADF95A /* submission_foundationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
