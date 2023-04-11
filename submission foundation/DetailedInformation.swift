@@ -10,6 +10,9 @@ import SwiftUI
 struct DetailedInformation: View {
     
     @State private var readMore = false
+    @State private var showItPricing = false
+    @State private var showItAvailable = false
+    @State private var showItFacilities = false
     
     var body: some View {
         NavigationStack{
@@ -70,27 +73,56 @@ struct DetailedInformation: View {
                     }
                     Spacer()
                     
+                    VStack{
+                        Button(action: {
+                            showItFacilities.toggle()
+                        }, label: {
+                            HStack{
+                                Text("Facilities")
+                                Spacer()
+                                Image(systemName: showItFacilities == false ? "chevron.right" : "chevron.up")
+                                    .padding()
+                            }
+                        })
+                        if showItFacilities{
+                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper.")
+                        }
+                            
+                    }
+                        
+                    VStack{
+                        Button(action: {
+                            showItAvailable.toggle()
+                        }, label: {
+                            HStack{
+                                Text("Available Watersport")
+                                Spacer()
+                                Image(systemName: showItAvailable == false ? "chevron.right" : "chevron.up")
+                                    .padding()
+                            }
+                        })
+                        if showItAvailable{
+                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper.")
+                        }
+                            
+                    }
                     
-                    HStack{
-                        Text("Facilities")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .padding()
+                    VStack{
+                        Button(action: {
+                            showItPricing.toggle()
+                        }, label: {
+                            HStack{
+                                Text("Pricing")
+                                Spacer()
+                                Image(systemName: showItPricing == false ? "chevron.right" : "chevron.up")
+                                    .padding()
+                            }
+                        })
+                        if showItPricing{
+                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper.")
+                        }
+                            
                     }
-
-                    HStack{
-                        Text("Available Watersport")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .padding()
-                    }
-                    HStack{
-                        Text("Pricing")
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                            .padding()
-                    }
-                
                     
                     
                     Button {
