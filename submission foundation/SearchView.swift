@@ -32,7 +32,11 @@ struct SearchView: View {
                         }
                         .background()
                         .onTapGesture {
-                            
+                            let location = "watersport"
+                            let url = URL(string: "maps://?q=\(location)")
+                            if UIApplication.shared.canOpenURL(url!) {
+                                  UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+                            }
                         }
                         Divider()
                     }
