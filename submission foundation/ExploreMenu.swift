@@ -26,9 +26,12 @@ struct ExploreMenu: View {
                     }.padding(.horizontal)
                     ScrollView(.horizontal) {
                         HStack{
-                            LocationStruct(name:"Bali Indah & Watersport", image: "watersport", desc: "Badung Regency, Bali")
-                            LocationStruct(name:"Bali Indah & Watersport", image: "watersport", desc: "Badung Regency, Bali")
-                            
+                            NavigationLink(destination: DetailedInformation()){
+                                LocationStruct(name:"Bali Indah & Watersport", image: "watersport", desc: "Badung Regency, Bali")
+                            }
+                            NavigationLink(destination: DetailedInformation()){
+                                LocationStruct(name:"Tanjung Benoa", image: "TanjungBenoa", desc: "Badung Regency, Bali")
+                            }
                         }
                     }
                     Spacer()
@@ -41,7 +44,7 @@ struct ExploreMenu: View {
                             CityStruct(name: "Bali", image: "baliIcon", desc: "165 Location")
                             CityStruct(name: "Lombok", image: "lombokIcon", desc: "57 Location")
                             CityStruct(name: "NTT", image: "nttIcon", desc: "48 Location")
-                            CityStruct(name: "NTB", image: "nttIcon", desc: "21 Location")
+                            
                         }
                     }
                     Spacer()

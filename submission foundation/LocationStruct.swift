@@ -23,6 +23,7 @@ struct LocationStruct: View {
                 Text(name)
                     .font(.title3)
                     .fontWeight(.bold)
+                    .foregroundColor(.black)
                 Text(desc)
                     .font(.body)
                     .foregroundColor(.gray)
