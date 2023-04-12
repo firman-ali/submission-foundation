@@ -26,10 +26,9 @@ struct ExploreMenu: View {
                     }.padding(.horizontal)
                     ScrollView(.horizontal) {
                         HStack{
-                            LocationStruct(name:"Bali Indah & Watersport", image: "BaliIndah", desc: "Badung Regency, Bali")
-                            LocationStruct(name:"Bali Indah & Watersport", image: "BaliIndah", desc: "Badung Regency, Bali")
-                            LocationStruct(name:"Bali Indah & Watersport", image: "BaliIndah", desc: "Badung Regency, Bali")
-                            LocationStruct(name:"Bali Indah & Watersport", image: "BaliIndah", desc: "Badung Regency, Bali")
+                            LocationStruct(name:"Bali Indah & Watersport", image: "watersport", desc: "Badung Regency, Bali")
+                            LocationStruct(name:"Bali Indah & Watersport", image: "watersport", desc: "Badung Regency, Bali")
+                            
                         }
                     }
                     Spacer()
