@@ -12,45 +12,39 @@ struct ResultView: View {
     
     
     var body: some View {
-        NavigationView {
-            NavigationStack {
-                VStack (alignment: .leading) {
-                    HStack(alignment: .bottom) {
-                        Button {
-                            
-                        } label: {
-                            Text("Top Match")
-                        }
-                        .cornerRadius(20)
-                        .buttonStyle(.borderedProminent)
-                        
-                        Button {
-                            
-                        } label: {
-                            Text("Nearby")
-                                .foregroundColor(.blue)
-                                .opacity(1)
-                        }
-                        .cornerRadius(20)
-                        .buttonStyle(.borderedProminent)
-                        .tint(Color("ButtonBackground"))
-                        
-                        
-                    }
-                    .padding(.horizontal)
-                    .padding(.trailing)
-                    List {
-                        ForEach(watersportList, id: \.id) { watersports in
-                            ResultItemView(watersport: watersports)
-                        }
-                    }
-                    .listStyle(PlainListStyle())
-                    .background(.gray)
+        VStack (alignment: .leading) {
+            HStack(alignment: .bottom) {
+                Button {
                     
+                } label: {
+                    Text("Top Match")
                 }
-                .searchable(text: $searchText)
-                .navigationTitle("")
+                .cornerRadius(20)
+                .buttonStyle(.borderedProminent)
+                
+                Button {
+                    
+                } label: {
+                    Text("Nearby")
+                        .foregroundColor(.blue)
+                        .opacity(1)
+                }
+                .cornerRadius(20)
+                .buttonStyle(.borderedProminent)
+                .tint(Color("ButtonBackground"))
+                
+                
             }
+            .padding(.horizontal)
+            .padding(.trailing)
+            List {
+                ForEach(watersportList, id: \.id) { watersports in
+                    ResultItemView(watersport: watersports)
+                }
+            }
+            .listStyle(PlainListStyle())
+            .background(.gray)
+            
         }
     }
 }
