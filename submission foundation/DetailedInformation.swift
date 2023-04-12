@@ -51,7 +51,7 @@ struct DetailedInformation: View {
                             
                             
                         }
-                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper. Donec ut tellus at urna varius interdum. Donec eget sollicitudin ex. Nullam vel nisl dapibus, rhoncus nunc non, malesuada ipsum. Vestibulum laoreet, metus commodo mollis mollis, turpis mauris consectetur ante, quis auctor tellus ipsum non leo. Quisque felis nulla, molestie porta placerat eget, feugiat vitae ipsum. Suspendisse id pharetra ipsum. Morbi eget leo purus. Aliquam pulvinar id augue id interdum. Donec rutrum facilisis leo, at luctus sapien egestas sed. Nunc ut nulla nunc. Sed malesuada diam tincidunt risus imperdiet, ut dignissim nunc pharetra.")
+                        Text("Sometimes it is very difficult to find fun yet affordable water sports activities in Bali. NBC exists to be. Sometimes it is very difficult to find fun yet affordable water sports activities in Bali. NBC exists to be. Sometimes it is very difficult to find fun yet affordable water sports activities in Bali. NBC exists to be. Sometimes it is very difficult to find fun yet affordable water sports activities in Bali. NBC exists to be. Sometimes it is very difficult to find fun yet affordable water sports activities in Bali. NBC exists to be")
                             .lineLimit(readMore == false ? 3 : nil)
                         Button(action: {
                             readMore.toggle()
@@ -60,7 +60,7 @@ struct DetailedInformation: View {
                         }
                         
                     }
-                    VStack(){
+                    VStack(alignment: .leading){
                         Text("Location").bold()
                             .font(.system(size: 20))
                         mapView()
@@ -77,7 +77,7 @@ struct DetailedInformation: View {
                     }
                     Spacer()
                     
-                    VStack{
+                    VStack(alignment: .leading){
                         Button(action: {
                             showItFacilities.toggle()
                         }, label: {
@@ -89,12 +89,20 @@ struct DetailedInformation: View {
                             }
                         })
                         if showItFacilities{
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper.")
+                            Text("""
+                            - Wetsuit atau drysuit
+                            - Masker diving
+                            - Regulator Diving
+                            - Buoyacy Compensation Device
+                            - Weight belt
+                            - Kaki katak
+                            - Aqualung.
+                            """)
                         }
                         
                     }
                     
-                    VStack{
+                    VStack(alignment: .leading){
                         Button(action: {
                             showItAvailable.toggle()
                         }, label: {
@@ -106,12 +114,18 @@ struct DetailedInformation: View {
                             }
                         })
                         if showItAvailable{
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper.")
+                            Text("""
+                            - Scuba Diving
+                            - Snorkling
+                            - Surfing
+                            - Banana Boat
+                            - Water Jetpack
+                            """)
                         }
                         
                     }
                     
-                    VStack{
+                    VStack(alignment: .leading){
                         Button(action: {
                             showItPricing.toggle()
                         }, label: {
@@ -123,7 +137,10 @@ struct DetailedInformation: View {
                             }
                         })
                         if showItPricing{
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper.")
+                            Text("""
+                            - Pax: Rp.700.000
+                            - Group: Rp. 1.000.000
+                            """)
                         }
                         
                     }
@@ -159,6 +176,7 @@ struct DetailedInformation: View {
                     .buttonStyle(.borderedProminent)
                     .shadow(radius: 3, x: 3, y: 3)
                 }
+                .padding(.horizontal)
             }.navigationTitle("Information")
 //                .navigationBarTitleDisplayMode(.inline)
                 
