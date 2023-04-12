@@ -38,27 +38,27 @@ struct DetailedInformation: View {
                         Text("(3,598 Reviews)")
                         Spacer()
                     }
-//                }
-                
+                    //                }
+                    
                     VStack(alignment: .leading){
                         HStack{
                             Image("Userpic").padding(.vertical)
                             VStack(alignment: .leading){
                                 Text("Bali Indah Dive & Watersport").bold()
                                 Text("Host & Owner")
-
+                                
                             }
-                    
-                        
+                            
+                            
                         }
-                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper. Donec ut tellus at urna varius interdum. Donec eget sollicitudin ex. Nullam vel nisl dapibus, rhoncus nunc non, malesuada ipsum. Vestibulum laoreet, metus commodo mollis mollis, turpis mauris consectetur ante, quis auctor tellus ipsum non leo. Quisque felis nulla, molestie porta placerat eget, feugiat vitae ipsum. Suspendisse id pharetra ipsum. Morbi eget leo purus. Aliquam pulvinar id augue id interdum. Donec rutrum facilisis leo, at luctus sapien egestas sed. Nunc ut nulla nunc. Sed malesuada diam tincidunt risus imperdiet, ut dignissim nunc pharetra.")
-                        .lineLimit(readMore == false ? 3 : nil)
-                    Button(action: {
-                        readMore.toggle()
-                    }){
-                        Text(readMore == false ? "Show more" : "Show less")
-                    }
-                    
+                        Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper. Donec ut tellus at urna varius interdum. Donec eget sollicitudin ex. Nullam vel nisl dapibus, rhoncus nunc non, malesuada ipsum. Vestibulum laoreet, metus commodo mollis mollis, turpis mauris consectetur ante, quis auctor tellus ipsum non leo. Quisque felis nulla, molestie porta placerat eget, feugiat vitae ipsum. Suspendisse id pharetra ipsum. Morbi eget leo purus. Aliquam pulvinar id augue id interdum. Donec rutrum facilisis leo, at luctus sapien egestas sed. Nunc ut nulla nunc. Sed malesuada diam tincidunt risus imperdiet, ut dignissim nunc pharetra.")
+                            .lineLimit(readMore == false ? 3 : nil)
+                        Button(action: {
+                            readMore.toggle()
+                        }){
+                            Text(readMore == false ? "Show more" : "Show less")
+                        }
+                        
                     }
                     VStack(){
                         Text("Location").bold()
@@ -73,7 +73,7 @@ struct DetailedInformation: View {
                     HStack{
                         Text("Information").bold()
                             .font(.system(size: 20))
-                    Spacer()
+                        Spacer()
                     }
                     Spacer()
                     
@@ -91,9 +91,9 @@ struct DetailedInformation: View {
                         if showItFacilities{
                             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper.")
                         }
-                            
-                    }
                         
+                    }
+                    
                     VStack{
                         Button(action: {
                             showItAvailable.toggle()
@@ -108,7 +108,7 @@ struct DetailedInformation: View {
                         if showItAvailable{
                             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper.")
                         }
-                            
+                        
                     }
                     
                     VStack{
@@ -125,29 +125,40 @@ struct DetailedInformation: View {
                         if showItPricing{
                             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id maximus augue. Cras quis est mi. Sed eu massa sit amet ipsum egestas bibendum sit amet a nisl. Nulla ultricies erat non nulla bibendum ullamcorper.")
                         }
-                            
+                        
                     }
                     
                     
-                    NavigationLink{
-                        mapView()
-                            } label: {
-                                Text("Send Me The Location")
-                                    .frame(maxWidth: .infinity)
-                                    .padding(5)
-                            }
-                            .padding()
-                            .buttonStyle(.borderedProminent)
-                            .shadow(radius: 3,
-                                    x: 3,
-                                    y: 3)
-                            .transition(.scale)
+                    //                    Button(action: {
+                    //
+                    //                    }, label: {
+                    //                        Text("Send Me The Location")
+                    //                            .frame(maxWidth: .infinity)
+                    //                            .padding(5)
+                    //                    }
+                    //                        .padding()
+                    //                        .buttonStyle(.borderedProminent)
+                    //                        .shadow(radius: 3,
+                    //                                x: 3,
+                    //                                y: 3)
+                    //                            .transition(.scale))
                     
+                    Button(action: {
+                        let lat = "-8.755852"
+                        let long = "115.222052"
+                        let url = URL(string: "maps://?saddr=&daddr=\(lat),\(long)")
+                        if UIApplication.shared.canOpenURL(url!) {
+                            UIApplication.shared.open(url!, options: [:], completionHandler: nil)
+                        }
+                    }, label: {
+                        Text("Send Me The Location")
+                            .frame(maxWidth: .infinity)
+                            .padding(5)
+                    })
+                    .padding()
+                    .buttonStyle(.borderedProminent)
+                    .shadow(radius: 3, x: 3, y: 3)
                 }
-                .padding(.horizontal)
-                
-                
-                                
             }.navigationTitle("Information")
 //                .navigationBarTitleDisplayMode(.inline)
                 

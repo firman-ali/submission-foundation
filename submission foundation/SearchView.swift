@@ -90,7 +90,7 @@ struct SearchedView: View {
                             .onTapGesture {
                                 showSheet = true
 //                                isSearching.toggle()
-                                searchText = "a"
+                                searchText = "watersport"
                             }
                             Divider()
                         }
