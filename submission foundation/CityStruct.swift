@@ -15,16 +15,13 @@ struct CityStruct: View {
     var body: some View {
         VStack {
             Image(image)
-                
-                .scaledToFit()
-                .frame(width: 50, height: 50)
-                .padding()
-                .background(.white)
-                .clipShape(Rectangle())
-              
-                
+                .resizable()
+                .scaledToFill()
+                .frame(width: 100, height: 100)
+                .clipped()
+                .cornerRadius(10)
             
-            VStack(alignment: .leading){
+            VStack{
                 Text(name)
                     .font(.title3)
                     .fontWeight(.bold)
@@ -32,16 +29,15 @@ struct CityStruct: View {
                     .font(.body)
                     .foregroundColor(.gray)
             }
-            Spacer()
+//
            
         }
         .padding()
-        
     }
 }
 
 struct CityStruct_Previews: PreviewProvider {
     static var previews: some View {
-        CityStruct(name:"Bali", image: "Bali", desc: "165 Location")    
+        CityStruct(name:"Bali", image: "baliIcon", desc: "165 Location")
     }
 }

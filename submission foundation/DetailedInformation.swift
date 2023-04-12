@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct DetailedInformation: View {
     
@@ -13,6 +14,7 @@ struct DetailedInformation: View {
     @State private var showItPricing = false
     @State private var showItAvailable = false
     @State private var showItFacilities = false
+    
     
     var body: some View {
         NavigationStack{
@@ -58,10 +60,12 @@ struct DetailedInformation: View {
                     }
                     
                     }
-                    VStack(alignment:.leading ){
-                    Text("Location").bold()
-                        .font(.system(size: 20))
-                    //...
+                    VStack(){
+                        Text("Location").bold()
+                            .font(.system(size: 20))
+                        mapView()
+                            .frame(height: 200)
+                            .cornerRadius(10)
                         
                         
                     }
@@ -125,8 +129,8 @@ struct DetailedInformation: View {
                     }
                     
                     
-                    Button {
-                    
+                    NavigationLink{
+                        mapView()
                             } label: {
                                 Text("Send Me The Location")
                                     .frame(maxWidth: .infinity)
@@ -138,6 +142,7 @@ struct DetailedInformation: View {
                                     x: 3,
                                     y: 3)
                             .transition(.scale)
+                    
                 }
                 .padding(.horizontal)
                 
