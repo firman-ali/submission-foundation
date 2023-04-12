@@ -15,17 +15,15 @@ struct ExploreMenu: View {
         NavigationView {
             NavigationStack{
                 VStack(alignment: .leading){
-                    Spacer()
                     Text("Explore your next destination")
                         .bold().font(.largeTitle)
                         .padding(.horizontal)
-                    Spacer()
+                        .padding(.vertical, 10)
                     HStack{
                         Image(systemName: "paperplane.fill").bold().foregroundColor(.blue)
                         Text("Where do you want to go?").bold().foregroundColor(.blue)
                         Spacer()
                     }.padding(.horizontal)
-                    
                     ScrollView(.horizontal) {
                         HStack{
                             LocationStruct(name:"Bali Indah & Watersport", image: "BaliIndah", desc: "Badung Regency, Bali")
@@ -34,19 +32,20 @@ struct ExploreMenu: View {
                             LocationStruct(name:"Bali Indah & Watersport", image: "BaliIndah", desc: "Badung Regency, Bali")
                         }
                     }
+                    Spacer()
                     HStack{
-                        Text("Your next location").bold().font(.headline)
-                        Spacer()
+                        Text("Your next location").bold().font(.title)
                         
                     }.padding(.horizontal)
                     ScrollView(.horizontal) {
                         HStack{
-                            CityStruct(name: "Bali", image: "Bali", desc: "165 Location")
-                            CityStruct(name: "Lombok", image: "Lombok", desc: "57 Location")
-                            CityStruct(name: "NTT", image: "Bali", desc: "48 Location")
-                            CityStruct(name: "NTB", image: "Lombok", desc: "21 Location")
+                            CityStruct(name: "Bali", image: "baliIcon", desc: "165 Location")
+                            CityStruct(name: "Lombok", image: "lombokIcon", desc: "57 Location")
+                            CityStruct(name: "NTT", image: "nttIcon", desc: "48 Location")
+                            CityStruct(name: "NTB", image: "nttIcon", desc: "21 Location")
                         }
                     }
+                    Spacer()
                 }
                 
                 

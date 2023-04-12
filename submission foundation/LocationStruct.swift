@@ -32,7 +32,6 @@ struct LocationStruct: View {
                     .font(.body)
                     .foregroundColor(.gray)
             }
-            Spacer()
            
         }
         .padding()

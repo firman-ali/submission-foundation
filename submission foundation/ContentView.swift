@@ -22,6 +22,7 @@ struct ContentView: View {
             
         }.navigationTitle("Explore")
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
