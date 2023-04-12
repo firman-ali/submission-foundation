@@ -22,6 +22,7 @@
 		FF258FFA29E39A72006B161D /* ExploreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF258FF929E39A72006B161D /* ExploreMenu.swift */; };
 		FF258FFE29E3AB53006B161D /* LocationStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF258FFD29E3AB53006B161D /* LocationStruct.swift */; };
 		FF25900029E3ABB7006B161D /* CityStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF258FFF29E3ABB7006B161D /* CityStruct.swift */; };
+		FF25900629E63E35006B161D /* TabMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF25900529E63E35006B161D /* TabMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		FF258FF929E39A72006B161D /* ExploreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreMenu.swift; sourceTree = "<group>"; };
 		FF258FFD29E3AB53006B161D /* LocationStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationStruct.swift; sourceTree = "<group>"; };
 		FF258FFF29E3ABB7006B161D /* CityStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityStruct.swift; sourceTree = "<group>"; };
+		FF25900529E63E35006B161D /* TabMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				0CD33C7029DE6A8C00ADF95A /* Assets.xcassets */,
 				0CAA520029E36EC300AD3208 /* SearchSheetView.swift */,
 				0CD33C7C29DE77C400ADF95A /* SearchView.swift */,
+				FF25900529E63E35006B161D /* TabMenu.swift */,
 				0CD33C7229DE6A8C00ADF95A /* Preview Content */,
 				152E057F29E39A320050D704 /* DetailedInformation.swift */,
 				484FF56D29E3EEEA00B0D425 /* ResultItemView.swift */,
@@ -181,6 +184,7 @@
 				484FF57029E3EF1700B0D425 /* SearchWaterSport.swift in Sources */,
 				484FF56E29E3EEEA00B0D425 /* ResultItemView.swift in Sources */,
 				FF25900029E3ABB7006B161D /* CityStruct.swift in Sources */,
+				FF25900629E63E35006B161D /* TabMenu.swift in Sources */,
 				FF258FFA29E39A72006B161D /* ExploreMenu.swift in Sources */,
 				152E058429E6465A0050D704 /* MapAnnotationView.swift in Sources */,
 			);
